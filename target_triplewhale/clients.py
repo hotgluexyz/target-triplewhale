@@ -12,7 +12,7 @@ class TriplewhaleSink(HotglueSink):
     @property
     def http_headers(self) -> dict:
         return {
-            "x-api-key": f"{self.config.get('api_key')}",
+            "x-api-key": f"{self.config.get('access_token')}",
             "Content-Type": "application/json",
         }
 

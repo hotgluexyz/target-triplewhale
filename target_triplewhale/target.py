@@ -13,7 +13,7 @@ class TargetTriplewhale(TargetHotglue):
     reference_data = {}
 
     config_jsonschema = th.PropertiesList(
-        th.Property("api_key", th.StringType, required=True),
+        th.Property("access_token", th.StringType, required=True),
         th.Property("shop", th.StringType, required=True),
         th.Property("platform_account_id", th.StringType, required=True),
     ).to_dict()

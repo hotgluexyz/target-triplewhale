@@ -7,7 +7,6 @@ class OrdersSink(TriplewhaleSink):
     endpoint = "/data-in/orders"
 
 
-
 class SubscriptionsSink(TriplewhaleSink):
 
     name = "Subscriptions"
