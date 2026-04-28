@@ -7,6 +7,9 @@ class OrdersSink(TriplewhaleSink):
     endpoint = "/data-in/orders"
 
     def preprocess_record(self, record: dict, context: dict) -> dict:
+        # add shop and platform_account_id to the record from config
+        record["shop"] = self.config.get("shop")
+        record["platform_account_id"] = self.config.get("platform_account_id")
         return record
 
     def upsert_record(self, record: dict, context: dict):
